@@ -1,0 +1,212 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.sidebar {
+    width: 22%;
+    height: 100vh;
+    background-color: rgba(84, 78, 141, 0.849);
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: 5px solid rgba(204, 200, 235, 0.9);
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+.navbar{
+    width: 100%;
+}
+.navbar a{
+    display: block;
+    margin: 20px 0px;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+.navbar a:hover{
+    background-color: rgba(29, 28, 36, 0.849);
+}
+.navbar a i{
+    font-size: 20px;
+    margin-right: 6px;
+}
+.social-media i{
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.social-media i:hover{
+    color: rgba(29, 28, 36, 0.849);
+}
+.content {
+    width: 78%;
+    float: right;
+}
+.header {
+    width: 100%;
+    height: 95vh;
+    background: url("Assets/mainBG.jpg") no-repeat center/cover;
+    color: white;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0 100px;
+   opacity: 90%;
+}
+.header h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.header p{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.content-container{
+    padding: 70px 70px 30px;
+}
+.sub-titile {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 40px 0 20px;
+}
+.about-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+}
+.para {
+    margin: 20px 0;
+}
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.project .image-div{
+    width: 310px;
+    height: 250px;
+    padding: 5px;
+    position: relative;
+    transition: transform .3s ease-in-out;
+}
+.project .image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-div div{
+    background-color: black;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    inset: 5px;
+    top: 60px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in,top .7s ease-in-out;
+}
+.image-div:hover div{
+    top: 5px;
+    opacity: 85%;
+    
+}
+.image-div:hover{
+    transform: translateY(-5px);
+}
+.contact {
+    margin-top: 40px;
+}
+
+.input-div{
+   display: flex;
+   justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.input-div input{
+    width: 310px;
+    padding: 10px 12px;
+    margin: 10px 0;
+}
+.feedback textarea{
+    width: 100%;
+    height: 150px;
+    margin: 20px 0;
+    padding: 10px;
+}
+.send-button {
+    padding:10px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(84, 78, 141, 0.849);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 70px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+@media screen and (max-width:1000px) {
+    .sidebar{
+        position: sticky;
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    .navbar a{
+        margin: 0 10px;
+    }
+    .content{
+        width: 100%;
+    }
+    .social-media{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width:520px) {
+    .header{
+        height: 70vh;
+        padding: 0 20px;
+    }
+    .header h1{
+        font-size: 25px;
+    }
+    .header p{
+        font-size: 14px;
+    }
+    .content-container{
+        padding: 30px;
+    }
+    .about-img{
+        height: 250px;
+        object-position: right;
+    }
+}
